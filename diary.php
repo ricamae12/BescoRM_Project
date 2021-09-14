@@ -2,68 +2,26 @@
 <html>
 <head>
 <title>My Personal Diary</title>
-	
+
+<style>
+    body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkdHSizK5bHI3Xt7ZvOoLlkEfdLVBsqsldA&usqp=CAU');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    </style>
 <style>
 
 body {
   margin: 2px;  
 }
 .header {
-  background-color:#dfbf9f;
+  background-color:#9e9e9e80;
   padding: 1px;
   height: 70px;
   text-align: left;
-}
-</style>
-
-<style>
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-
-<style>
-input[type=text], select {
-  width: 100%;
-  padding: 15px 5px;
-  margin: 5px ;
-  display: inline-block;
-  border: 1px solid #dfbf9f;
-  border-radius: 7px;
-  box-sizing: border-sizing;
-  
-}
-
-
-
-div {
-  border-radius: 4px;
-  background-color: #e6ccb3;
-  padding: 20px;
-}
-
-h1 {
-  text-shadow: 8px 2px;
-}
-
-.user{
-  font-weight: bold;
-  color:black;
-}
-.time{
-  color:gray
-}
-.userComments{
-  color:black;
-}
-.replies{
-  margin-left: 20px;
-  
 }
 </style>
 
@@ -78,35 +36,41 @@ h1 {
 }
 </style>
 <div class="header">
-  <h1 style="font-family:courier;"align= "center" <b> Personal Diary </b></h1>
+  <h1 style="font-family:courier;"align ="center" ><b>Welcome to your diary</b></h1>
 </div>
-<div style="width:500px; height:670px; margin:100px 400px 100px 400px; background-color:white; border:2px solid white;">
+<div style="width:500px; height:300px; margin:100px 400px 100px 400px; background-color:rgba(255, 255, 255, 0.116); border:2px solid white;">
 	<div style="margin:20px">
  
-    <form>
- <input type='date' id='date' name='date' required>
-</form>
+
+  <div id="datediv" class= "row text-left">
+  <div class ="col">
+  <label for="udato"><b>Date</b> <span style="color:red"></span></label>
+  <span id ="dateinput"> 
+    <input class id= "udato" type ="datetime-local" name= "udato"
+    autocomplete ="on" value= "2021-09-14 13:48:43">
+    <a href="?" class= "doit" data-action="toggle-dateinput">
+      <i class= "ml-2 fa fa-refresh">
+        
+      </i>
+</a>
+
+</span>
+      
 
     <div class="container">
         <form action="data.php" method="POST">
-        <label for="Memories">Upload your memories here<span style="color:red"></span></label>
+          <br>
+        <label for="Memories"><b>Upload your memories here</b><span style="color:red"></span></label>
         <p><textarea name="memories" placeholder="Type your memories here..." cols="40" rows="5" required></textarea></p>
     <input type="submit" name= "save" value="save"></td></button>
     <input type="submit" name= "edit" value="edit"></td></button>
-    <input type="submit" name= "delete" value="delete"></td></button>
+    <input type="submit" name= "submit" value="delete"></td></button>
     </div>
     <br>
 
   </form>
 </div>
 
-<style>
-body {
-  background-image: url("https://i.pinimg.com/564x/b2/81/b7/b281b76a945139945e9a93c8e0a11322.jpg");
-  background-repeat:repeat;
-  background-attachment: fixed;
-}
-</style>
 
 </body>
 </html>
